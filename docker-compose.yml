@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  app:
+    tty: true # Enables debugging capabilities when attached to this container.
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: document_ms-api
+    command: >
+      sh -c "
+        if [ -f tmp/pids/server.pid ]; then
+          rm tmp/pids/server.pid
+        fi
+        bundle exec puma"
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/document_ms
+    env_file: .env

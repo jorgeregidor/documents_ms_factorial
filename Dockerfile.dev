@@ -1,0 +1,27 @@
+FROM ruby:2.6.3-alpine
+LABEL maintainer="Sebastian Schkudlara sebastian@makakoo.com"
+
+ENV BUILD_PACKAGES bash curl-dev build-base libxml2-dev \ 
+                        libxslt-dev poppler-utils \ 
+                        poppler-data nano git
+
+# Update and install all of the required packages.
+# At the end, remove the apk cache
+RUN apk update && \
+    apk upgrade && \
+    apk add $BUILD_PACKAGES && \
+    rm -rf /var/cache/apk/*
+
+RUN gem install bundler --no-document
+
+# Use libxml2, libxslt a packages from alpine for building nokogiri
+RUN bundle config build.nokogiri
+
+RUN mkdir /document_ms
+WORKDIR /document_ms
+
+# RUBY STUFF
+COPY . /document_ms
+RUN bundle install --jobs 20 --retry 5
+
+ADD . /document_ms

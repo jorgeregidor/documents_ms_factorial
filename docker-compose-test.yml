@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  test:
+    tty: true # Enables debugging capabilities when attached to this container.
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: document_ms-api-test
+    command: >
+      sh -c "
+        bundle exec rubocop &&
+        bundle exec rspec"
+    volumes:
+      - .:/document_ms
