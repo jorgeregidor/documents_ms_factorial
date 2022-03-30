@@ -8,6 +8,9 @@ require 'simplecov'
 SimpleCov.start 'rails'
 puts 'required simplecov'
 
+require 'support/factory_bot'
+require 'support/aux_functions'
+
 require File.expand_path('../config/environment', __dir__)
 
 # Prevent database truncation if the environment is production

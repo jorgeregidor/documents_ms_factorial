@@ -36,7 +36,6 @@ module DocumentMs
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
-    config.active_job.queue_adapter = :shoryuken
     config.autoload_paths += %W[#{config.root}/lib]
 
     config.generators do |g|

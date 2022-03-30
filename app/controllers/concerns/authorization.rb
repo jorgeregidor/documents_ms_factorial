@@ -15,12 +15,4 @@ module Authorization
   def user_to_hash_object
     JSON.parse(@oauth_user_info)
   end
-
-  def build_user_info
-    return if @current_user.blank?
-
-    {
-      userId: @current_user.id
-    }
-  end
 end

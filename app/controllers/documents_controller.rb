@@ -52,7 +52,7 @@ class DocumentsController < ApplicationController
 
   def document_create_params
     restify_param(:document).require(:document).permit(
-      :resource_key, :name, :logo_url, { data: {} }
+      :name, :logo_url, { data: {} }
     )
   end
 

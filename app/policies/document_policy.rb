@@ -25,10 +25,6 @@ class DocumentPolicy < ApplicationPolicy
     true
   end
 
-  def update_status?
-    update?
-  end
-
   def destroy?
     record.owner_id == user.id
   end

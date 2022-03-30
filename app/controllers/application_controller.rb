@@ -46,14 +46,4 @@ class ApplicationController < ActionController::API
       errors: [{ status: 403, title: 'You are not authorized to perform this action.' }]
     }, status: :forbidden
   end
-
-  def build_success_message(status, message, object)
-    {
-      data: {
-        title: "#{action_name} #{object}",
-        message: message,
-        status: status
-      }
-    }
-  end
 end

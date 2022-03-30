@@ -10,7 +10,7 @@ class Snippet
   field :input_key, type: String
   field :input_value, type: String
 
-  embedded_in :account, inverse_of: :permissions
+  embedded_in :account, inverse_of: :snippets
 
   track_history on: %i[fields],
                 modifier_field: :nil,

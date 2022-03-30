@@ -27,6 +27,8 @@ class Document
     message: "%<value>s is not a valid status. Valid statuses: #{STATUS.map(&:downcase)}"
   }
 
+  validates :name, presence: true
+
   # dynamic fields will be tracked automatically
   # https://github.com/mongoid/mongoid-history
   track_history on: %i[fields],
@@ -49,10 +51,6 @@ class Document
   }
   scope :filter_by_status, ->(status) { where(status: status) }
   scope :filter_by_not_deleted, -> { where.not(status: :deleted) }
-
-  def self.filter_by_user_id(user_id)
-    any_of({ owner_id: user_id }, { permissions: { user_id: user_id } })
-  end
 
   def self.fetch_all(options)
     build_options(options)

@@ -20,22 +20,4 @@ class AccountPolicy < ApplicationPolicy
   def update?
     show?
   end
-
-  def create?
-    true
-  end
-
-  class Scope < Scope
-    attr_reader :user, :scope
-
-    def initialize(user, scope)
-      super
-      @user  = user
-      @scope = scope
-    end
-
-    def resolve
-      scope.find_by(owner_id: user.id)
-    end
-  end
 end

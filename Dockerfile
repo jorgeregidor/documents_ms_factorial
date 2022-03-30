@@ -1,5 +1,5 @@
 FROM ruby:2.6.3-alpine
-LABEL maintainer="Jorge Regidor jorge.regidor@chaingotech.com"
+LABEL maintainer="Jorge Regidor jorgeregidor@gmail.com"
 
 ENV BUILD_PACKAGES bash curl-dev build-base libxml2-dev \ 
                         libxslt-dev poppler-utils \ 
