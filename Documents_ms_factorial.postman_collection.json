@@ -1,0 +1,496 @@
+{
+	"info": {
+		"_postman_id": "d3c0e694-0c1d-42f1-8564-6a9c45c2a31a",
+		"name": "Documents_ms_factorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Documents",
+			"item": [
+				{
+					"name": "permissions",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "User-Info",
+										"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"type\": \"permissions\",\n        \"attributes\": {\n            \"read\": true,\n            \"write\": true,\n            \"user_id\": \"1234\"\n        }\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/documents/cf821f00-91a7-013a-cb6a-3e22fbcafb54/permissions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"documents",
+										"cf821f00-91a7-013a-cb6a-3e22fbcafb54",
+										"permissions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "User-Info",
+										"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"type\": \"permissions\",\n        \"id\": \"2028fba0-91c0-013a-cb92-3e22fbcafb54\",\n        \"attributes\": {\n            \"read\": true,\n            \"write\": true,\n            \"user_id\": \"1234\"\n        }\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/documents/68209fd0-60d0-013a-9476-3e22fbcafb54/permissions/2028fba0-91c0-013a-cb92-3e22fbcafb54",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"documents",
+										"68209fd0-60d0-013a-9476-3e22fbcafb54",
+										"permissions",
+										"2028fba0-91c0-013a-cb92-3e22fbcafb54"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "index",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Info",
+										"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:3000/documents/68209fd0-60d0-013a-9476-3e22fbcafb54/permissions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"documents",
+										"68209fd0-60d0-013a-9476-3e22fbcafb54",
+										"permissions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Info",
+										"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+										"type": "text"
+									},
+									{
+										"key": "Access-Token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyZXNvdXJjZV9pZCI6ImdjcjZfNGVoS2ZhNmFIaEVXNzFqcFNsOTRQeFNsMzFkY0V1RkxtSUZvSzJ1c1I5S1AtNmQ5S0hfUlBsZ0x6VXZFYS1ITlp5TGpkcVhFZkR4WmhHMnBBIiwiZXhwaXJlcyI6MTY0MzExMTM2NX0.rX5FNTNTsIoXlEggsqMtKnVgpzKFSFCZvMokqHzpe1Y",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/documents/68209fd0-60d0-013a-9476-3e22fbcafb54/permissions/1e04ae70-60f1-013a-9476-3e22fbcafb54",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"documents",
+										"68209fd0-60d0-013a-9476-3e22fbcafb54",
+										"permissions",
+										"1e04ae70-60f1-013a-9476-3e22fbcafb54"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "User-Info",
+										"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+										"type": "text"
+									},
+									{
+										"key": "Access-Token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyZXNvdXJjZV9pZCI6ImdjcjZfNGVoS2ZhNmFIaEVXNzFqcFNsOTRQeFNsMzFkY0V1RkxtSUZvSzJ1c1I5S1AtNmQ5S0hfUlBsZ0x6VXZFYS1ITlp5TGpkcVhFZkR4WmhHMnBBIiwiZXhwaXJlcyI6MTY0MzExMTM2NX0.rX5FNTNTsIoXlEggsqMtKnVgpzKFSFCZvMokqHzpe1Y",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/documents/68209fd0-60d0-013a-9476-3e22fbcafb54/permissions/1e04ae70-60f1-013a-9476-3e22fbcafb54",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"documents",
+										"68209fd0-60d0-013a-9476-3e22fbcafb54",
+										"permissions",
+										"1e04ae70-60f1-013a-9476-3e22fbcafb54"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Info",
+								"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"type\": \"document\",\n        \"attributes\": {\n            \"name\": \"documents1\",\n            \"data\": {\"merchandises\": {\"hola\":1}},\n            \"status\": \"bad_status\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/documents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Info",
+								"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/documents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Info",
+								"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/documents/cf821f00-91a7-013a-cb6a-3e22fbcafb54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"documents",
+								"cf821f00-91a7-013a-cb6a-3e22fbcafb54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "User-Info",
+								"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"type\": \"document\",\n        \"attributes\": {\n            \"name\": \"nombre1\",\n            \"data\": {\"prueba\": \"pueba\"}\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/documents/cf821f00-91a7-013a-cb6a-3e22fbcafb54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"documents",
+								"cf821f00-91a7-013a-cb6a-3e22fbcafb54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Info",
+								"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/documents/68209fd0-60d0-013a-9476-3e22fbcafb54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"documents",
+								"68209fd0-60d0-013a-9476-3e22fbcafb54"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "snippets",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Info",
+								"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"type\": \"snippet\",\n        \"attributes\": {\n            \"input_key\": \"field2\",\n            \"input_value\": \"value2\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/snippets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"snippets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Info",
+								"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/snippets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"snippets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Info",
+								"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/snippets/08288d40-91a9-013a-cb6b-3e22fbcafb54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"snippets",
+								"08288d40-91a9-013a-cb6b-3e22fbcafb54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Info",
+								"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+								"type": "text"
+							},
+							{
+								"key": "Access-Token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyZXNvdXJjZV9pZCI6ImdjcjZfNGVoS2ZhNmFIaEVXNzFqcFNsOTRQeFNsMzFkY0V1RkxtSUZvSzJ1c1I5S1AtNmQ5S0hfUlBsZ0x6VXZFYS1ITlp5TGpkcVhFZkR4WmhHMnBBIiwiZXhwaXJlcyI6MTY0MzExMTM2NX0.rX5FNTNTsIoXlEggsqMtKnVgpzKFSFCZvMokqHzpe1Y",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/snippets/0ee55580-60c6-013a-9476-3e22fbcafb54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"snippets",
+								"0ee55580-60c6-013a-9476-3e22fbcafb54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "User-Info",
+								"value": "{\"data\":{\"id\":\"0d80b974-9589-43fa-a539-717739f21908\",\"type\":\"user\", \"organizationId\": \"30a5f2bae-cc14-4b41-8556-0ce19848e4b8\" }}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"type\": \"snippet\",\n        \"attributes\": {\n            \"input_key\": \"field11\",\n            \"input_value\": \"value11\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/f6ca4400-60c5-013a-9476-3e22fbcafb54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"f6ca4400-60c5-013a-9476-3e22fbcafb54"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

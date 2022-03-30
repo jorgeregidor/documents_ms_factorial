@@ -35,7 +35,7 @@ docker-compose up
 
 ### REQUIREMENTS ###
 
-  - **Ruby version:** 2.7.1
+  - **Ruby version:** 2.6.3
   - **Bundler** [How to install](http://bundler.io/)
   - **MongoDB version** 4.2 [How to install](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
 
